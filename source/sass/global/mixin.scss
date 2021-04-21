@@ -1,0 +1,9 @@
+@mixin no-outline {
+  outline: none;
+  background: transparent;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
