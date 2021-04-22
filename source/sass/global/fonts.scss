@@ -1,35 +1,51 @@
+/* poppins-regular - latin */
 @font-face {
-  font-family: "PT Mono";
-  src: url("../fonts/PTMono-Regular.woff2") format("woff2"),
-    url("../fonts/PTMono-Regular.woff") format("woff");
-  font-weight: 400;
+  font-family: "Poppins";
   font-style: normal;
+  font-weight: 400;
   font-display: swap;
+  src: local("Poppins"),
+    url("../../fonts/Poppinsregular.woff2") format("woff2"),
+    url("../../fonts/Poppinsregular.woff") format("woff");
 }
-
+/* poppins-500 - latin */
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
-    url("../fonts/Roboto-Medium.woff") format("woff");
+  font-family: "Poppins";
+  font-style: normal;
   font-weight: 500;
-  font-style: normal;
   font-display: swap;
+  src: local("Poppins"),
+    url("../../fonts/poppins-v15-latin-500.woff2") format("woff2"),
+    url("../../fonts/poppins-v15-latin-500.woff") format("woff");
 }
 
+/* cormorant-garamond-italic - latin */
 @font-face {
-  font-family: "Roboto Condensed";
-  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"),
-    url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+  font-family: "Cormorant Garamond";
+  font-style: italic;
   font-weight: 400;
-  font-style: normal;
   font-display: swap;
+  src: local("Cormorant Garamond"),
+    url("../../fonts/Cormorantgaramond.woff2") format("woff2"),
+    url("../../fonts/Cormorantgaramond.woff") format("woff");
 }
-
+/* cormorant-garamond-600 - latin */
 @font-face {
-  font-family: "Roboto Condensed";
-  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"),
-    url("../fonts/RobotoCondensed-Bold.woff") format("woff");
-  font-weight: 700;
+  font-family: "Cormorant Garamond";
   font-style: normal;
+  font-weight: 600;
   font-display: swap;
+  src: local("Cormorant Garamond"),
+    url("../../fonts/Cormorantgaramondsemibold.woff2") format("woff2"),
+    url("../../fonts/Cormorantgaramondsemibold.woff") format("woff");
+}
+/* cormorant-garamond-700 - latin */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Cormorant Garamond"),
+    url("../../fonts/Cormorantgaramondsemibold.woff2") format("woff2"),
+    url("../../fonts/Cormorantgaramondsemibold.woff") format("woff");
 }
