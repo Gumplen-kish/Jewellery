@@ -1,0 +1,30 @@
+.toggle {
+  display: none;
+
+  @media (max-width: $breakpoint-tablet) {
+    position: absolute;
+    top: 51px;
+    left: 38px;
+    display: block;
+    width: 38px;
+    height: 27px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    z-index: 2;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    top: 34px;
+    left: 8px;
+  }
+}
