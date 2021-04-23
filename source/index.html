@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Jewellery</title>
   <meta name="Description" content="Jewellery">
-  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Cormorantgaramond.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Cormorantgaramond.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Cormorantgaramondbold.woff" as="font" crossorigin="anonymous">
@@ -18,6 +17,7 @@
   <link rel="preload" href="fonts/Poppinsregular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-v15-latin-500.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
         <a class="header-login modal-open modal-open--login" href="login.html">Login</a>
         <a class="modal-open modal-open--cart" href="cart.html">
           <span>Cart <span>0</span></span>
-          <svg width="18" height="16">
+          <svg width="20" height="18">
             <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
           </svg>
         </a>
@@ -94,5 +94,99 @@
       </nav>
     </div>
   </header>
-  
+  <main>
+
+  </main>
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__first-part">
+        <p>The good stuff in&nbsp;your inbox </p>
+        <span class="footer__promise">News and updates from CH. No spam, we promise.</span>
+        <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+          <div class="footer__inner">
+            <div class="footer__email">
+              <input type="email" name="email" id="email" placeholder="Your E-mail" required>
+              <label class="visually-hidden" for="email">Your E-mail</label>
+            </div>
+            <div class="footer__submit">
+              <button type="submit">
+                <span>Sign Up</span>
+                <svg width="29" height="9">
+                  <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="footer__second-part">
+        <div class="footer__info info">
+          <ul>
+            <li>
+              <a href="#">Ordering & Payment</a>
+            </li>
+            <li>
+              <a href="#">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="#">Returns & Exchanges</a>
+            </li>
+            <li>
+              <a href="#">Delivery</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">About CH</a>
+            </li>
+            <li>
+              <a href="#">Stores & Hours</a>
+            </li>
+            <li>
+              <a href="#">Jobs</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__social social">
+          <ul>
+            <li>
+              <a href="https://facebook.com" aria-label="Facebook" target="_blank">
+                <svg class="social__icon social__icon--facebook" width="8" height="15">
+                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com" aria-label="Instagram" target="_blank">
+                <svg class="social__icon social__icon--inst" width="15" height="15">
+                  <use xlink:href="img/sprite_auto.svg#icon-instagramm"></use>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://pinterest.com" aria-label="Pinterest" target="_blank">
+                <svg class="social__icon social__icon--pintr" width="15" height="15">
+                  <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
+                </svg>
+                <span>Pinterest</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com" aria-label="Twitter" target="_blank">
+                <svg class="social__icon social__icon--twitter" width="15" height="13">
+                  <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+                </svg>
+                <span>Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
