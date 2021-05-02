@@ -55,33 +55,32 @@
     @media (max-width: $breakpoint-mobile) {
       display: none;
     }
-  } 
+  }
 }
 
 .social__icon {
   position: absolute;
   top: 3px;
   left: -28px;
-  fill: white;
 
   @media (max-width: $breakpoint-mobile) {
     width: 12px;
     height: 21px;
     top: 3px;
     left: 1px;
-  
+
     &--inst {
       width: 20px;
       height: 21px;
       left: -3px;
     }
-  
+
     &--pintr {
       width: 20px;
       height: 21px;
       left: 4px;
     }
-  
+
     &--tw {
       width: 20px;
       height: 18px;
@@ -90,4 +89,3 @@
     }
   }
 }
-

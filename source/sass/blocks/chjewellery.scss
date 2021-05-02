@@ -1,0 +1,144 @@
+.chjewellery {
+  & h2 {
+    @include font-source(34px, bold, 44px, $main-black);
+    @include clear(27px);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 15px;
+    }
+  }
+
+  & span {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 55px;
+  }
+
+  & ul {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    max-height: 415px;
+
+    @media (max-width: $breakpoint-tablet) {
+      max-height: 348px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      min-height: 370px;
+      width: 290px;
+      margin: 0 auto;
+    }
+  }
+
+  & li {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 19.66%;
+    margin-bottom: 20px;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 45%;
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 0;
+
+      @media (max-width: $breakpoint-mobile) {
+        width: 45%;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 34.19%;
+      margin-bottom: 0;
+
+      @media (max-width: $breakpoint-mobile) {
+        order: 1;
+        width: 50%;
+      }
+    }
+
+    &:nth-child(4) {
+      width: 19.83%;
+
+      @media (max-width: $breakpoint-mobile) {
+        order: 1;
+        width: 50%;
+      }
+    }
+
+    &:nth-child(5) {
+      width: 18.63%;
+      margin-bottom: 0;
+
+      @media (max-width: $breakpoint-mobile) {
+        width: 45%;
+      }
+    }
+
+    &:nth-child(6) {
+      margin-left: 11px;
+      width: 18.63%;
+
+      @media (max-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
+
+    &:nth-child(7) {
+      width: 19.83%;
+      margin-bottom: 0;
+
+      @media (max-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
+  }
+}
+
+.chjewellery__wrapper {
+  margin-bottom: 130px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 63px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 62px;
+  }
+}
+
+
+
+.chjewellery__link {
+  margin: 0 auto;
+  margin-bottom: 60px;
+  display: block;
+  width: 76px;
+  color: $main-black;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $brown;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 46px;
+  }
+}

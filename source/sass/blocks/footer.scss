@@ -3,15 +3,11 @@
   background-color: $black;
 
   & input {
-    width: 100%;
-    padding: 14px 18px 11px 0;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    color: $grey;
+    @include main-font-source(14px, 500, 21px, $grey);
     box-sizing: border-box;
     overflow: hidden;
-  
+    width: 100%;
+    padding: 14px 18px 11px 0;
     border: none;
     background-color: transparent;
     outline: none;
@@ -20,7 +16,22 @@
     &:focus {
       opacity: 0.8;
       background-color: $white;
-      color: $black;
+      color: $main-black;
+    }
+  }
+
+  & button {
+    @include main-font-source(16px, 500, 21px, $grey);
+    display: block;
+    width: 109px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
     }
   }
 }
@@ -46,18 +57,6 @@
   width: 43%;
   margin-right: 7.5%;
 
-  & p {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 11px;
-    font-family: "Cormorant Garamond", "Garamond", serif;
-    font-weight: bold;
-    font-size: 34px;
-    line-height: 44px;
-    color:  $white;
-    letter-spacing: 0.03em;
-  }
-
   @media (max-width: $breakpoint-tablet) {
     width: 83%;
     margin-right: auto;
@@ -67,6 +66,12 @@
   @media (max-width: $breakpoint-mobile) {
     width: 100%;
     margin-bottom: 47px;
+  }
+
+  & p {
+    @include font-source(34px, bold, 44px, $white);
+    @include clear(11px);
+    letter-spacing: 0.03em;
   }
 }
 
@@ -95,37 +100,20 @@
   display: flex;
 
   & span {
-    color: $white;
     margin-right: 13px;
+    color: $white;
   }
 
   & svg {
-    stroke: $white;
-  }
-}
-
-.footer button {
-  display: block;
-  width: 109px;
-  padding: 0;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: $grey;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
+    color: $white;
+    transform: rotate(180deg);
   }
 }
 
 .footer__second-part {
+  margin-top: 7px;
   display: flex;
   width: 49.5%;
-  margin-top: 7px;
   justify-content: space-between;
 
   @media (max-width: $breakpoint-tablet) {

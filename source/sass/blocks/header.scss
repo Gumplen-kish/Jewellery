@@ -1,149 +1,297 @@
 .header {
   position: relative;
-  width: 100%;
 
-  @media (max-width: $breakpoint-tablet) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
+  &::before {
+    @include pseudo(" ", absolute, 100%, 1px);
     top: 115px;
     left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: $line;
+    background-color: $light-grey;
+  }
+
+  &--product {
+    &::before {
+      top: 125px;
+    }
+
+    &::after {
+      @include pseudo(" ", absolute, 100%, 1px);
+      top: 186px;
+      left: 0;
+      background-color: $light-grey;
+    }
 
     @media (max-width: $breakpoint-tablet) {
-      top: 123px;
+      @include no-outline;
     }
   }
 
-  a {
-    color: $black;
-
-    &:hover,
-    &:focus {
-      color: $brown;
-      outline-color: $brown;
-    }
-
-    &:active {
-      color: $brown;
-      opacity: 0.75;
+  &--catalog {
+    &::before {
+      top: 125px;
     }
   }
-}
-
-.header-wrapper {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 30px;
-  padding-right: 93px;
-  padding-left: 95px;
 
   @media (max-width: $breakpoint-tablet) {
-    flex-wrap: nowrap;
-    padding-right: 161px;
-    padding-left: 165px;
-  }
-}
+    top: 0;
+    left: 0;
+    min-height: 126px;
+    min-width: 100%;
 
-.header-toggle {
-  display: none;
-}
-
-
-.header-logo {
-  display: block;
-  width: 66px;
-  height: 66px;
-  transform: translateX(-50%);
-
-  svg {
-    fill: $brown;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    width: 52px;
-    height: 52px;
-  }
-}
-
-.header-login {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-
-  @media (max-width: $breakpoint-tablet) {
-    display: none;
-  }
-}
-
-.header__login-cart {
-  display: flex;
-  width: 150px;
-  justify-content: space-between;
-  padding-left: 26px;
-  padding-right: 7px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 21px;
-
-  @media (max-width: $breakpoint-tablet) {
-    width: 40px;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-
-  @media (max-width: $breakpoint-tablet) {
-    span {
+    &::before {
       display: none;
     }
   }
 
-  svg {
-    display: none;
+  @media (max-width: $breakpoint-mobile) {
+    min-height: 92px;
+  }
+}
+
+.header__container {
+  position: relative;
+  padding-top: 42px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &--product {
+    padding-top: 53px;
+    margin-bottom: 80px;
 
     @media (max-width: $breakpoint-tablet) {
-      display: block;
-      stroke: $black;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--catalog {
+    padding-top: 53px;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: 106px;
+    flex-direction: column;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 72px;
+  }
+}
+
+.header__logo {
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 34px);
+
+  @media (max-width: $breakpoint-mobile) {
+    top: 20px;
+    left: calc(50% - 26px);
+  }
+
+  & a {
+    color: $brown;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  & svg {
+    width: 66px;
+    height: 66px;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 52px;
+      height: 52px;
     }
   }
 }
 
-.header-nav {
+.header__nav {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 69px;
 
   @media (max-width: $breakpoint-tablet) {
-    display: none;
+    margin-top: 46px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: 36px;
   }
 }
 
-.header__site-menu {
-  @include no-list;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  min-height: 60px;
-  padding-left: 165px;
-  padding-right: 155px;
+// Состояния
+@media (max-width: $breakpoint-tablet) {
+  .header--opened {
+    &.header {
+      min-height: 778px;
+      background-color: $brown;
+    }
+
+    .header__toggle svg {
+      background-color: $brown;
+      stroke: $white;
+    }
+
+    .header__logo svg {
+      color: $white;
+    }
+
+    .header__header-cart svg {
+      color: $white;
+    }
+  }
+
+  .header--closed {
+    &.header {
+      background-color: $white;
+    }
+
+    .header__wrapper {
+      padding-top: 0;
+    }
+
+    .header__toggle svg {
+      stroke: $main-black;
+    }
+
+    .header__logo svg {
+      fill: $brown;
+    }
+
+    .header__header-cart svg {
+      stroke: $main-black;
+    }
+
+    .header__nav,
+    .header__header-login,
+    .header__search {
+      display: none;
+    }
+  }
+
+  .header--nojs {
+    position: static;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .header--opened {
+    &.header {
+      min-height: 684px;
+    }
+  }
+}
+
+
+/*Страницы Логин*/
+.header-login {
+  @include main-font-source (14px, 500, 21px, $main-black);
+  margin-right: 81px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    order: 1;
+    padding: 0;
+    margin: 0;
+    margin-top: 3px;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $main-black;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}
+
+
+/*Страницы Карточки*/
+.header-cart {
+  position: absolute;
+  top: 42px;
+  right: 17px;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &--product,
+  &--catalog {
+    top: 52px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    top: 55px;
+    right: 45px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    top: 37px;
+    right: 14px;
+  }
+
+  & svg {
+    display: none;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+      fill: transparent;
+      color: $main-black;
+
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  & span {
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
 
   & a {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 21px;
+    color: $main-black;
 
     &:hover,
     &:focus {
@@ -153,13 +301,5 @@
     &:active {
       opacity: 0.7;
     }
-  }
-
-  li:not(:last-child) {
-    margin-right: 36px;
-  }
-
-  &--about {
-    display: none;
   }
 }

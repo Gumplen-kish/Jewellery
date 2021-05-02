@@ -1,5 +1,5 @@
-# Jewellery
-Проект Jewellery
+# jewellery
+Учебный проект Jewellery
 
 Перед запуском проекта рекомендуется установить модули node.js из файла package.json --- команда npm instull
 
