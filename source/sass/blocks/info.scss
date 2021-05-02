@@ -15,12 +15,12 @@
   & ul {
     @include no-list;
 
-    &:first-of-type {
-      margin-right: 15px;
-    }
-
     @media (max-width: $breakpoint-mobile) {
       margin-bottom: 20px;
+    }
+
+    &:first-of-type {
+      margin-right: 15px;
     }
   }
 

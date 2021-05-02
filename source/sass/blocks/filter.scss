@@ -1,0 +1,240 @@
+.filter__close {
+  display: none;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+    position: absolute;
+    top: -17px;
+    right: -23px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    top: -16px;
+    right: -15px;
+  }
+}
+
+.filter__item {
+  margin: 0;
+  padding: 0;
+  border: 1px solid $brown;
+
+  @media (max-width: $breakpoint-tablet) {
+    border: none;
+    border-bottom: 1px solid $brown;
+  }
+
+  &:not(:last-of-type) {
+    border-bottom: none;
+
+    @media (max-width: $breakpoint-tablet) {
+      border-bottom: 1px solid $brown;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 35px;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 39px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $light-grey;
+  }
+}
+
+.filter__group {
+  @include main-font-source(16px, normal, 21px, $main-black);
+  padding: 23px;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0;
+
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &::before {
+    @include pseudo(" ", absolute, 25px, 13px);
+    right: 21px;
+    top: 28px;
+    background-image: url("../img/icon-down.svg");
+    background-repeat: no-repeat;
+
+    @media (max-width: $breakpoint-tablet) {
+      right: 37px;
+      top: 39px;
+      background-size: 39px 22px;
+      background-position: 50% 50%;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      right: 18px;
+      top: 30px;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 18px;
+    line-height: 23px;
+    padding-top: 34px;
+    padding-bottom: 33px;
+    padding-left: 25px;
+    padding-right: 24px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.filter__list {
+  @include no-list;
+  display: none;
+  padding-left: 57px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-top: -10px;
+    margin-bottom: 37px;
+    padding-left: 64px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: 0;
+    padding-left: 61px;
+    margin-bottom: 25px;
+  }
+
+  li {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 17px;
+    }
+  }
+
+  & label {
+    font-size: 14px;
+    line-height: 18px;
+    color: $main-black;
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  & input[type="checkbox"] + label {
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      @include pseudo(" ", absolute, 15px, 15px);
+      top: 2px;
+      left: -22px;
+      border: 1px solid $brown;
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 18px;
+        height: 18px;
+        left: -29px;
+      }
+    }
+  }
+
+  & input[type="checkbox"]:checked + label::before {
+    background-color: $brown;
+  }
+}
+
+.filter__btn {
+  @include main-font-source(16px, normal, 21px, $white);
+  width: 100%;
+  min-height: 68px;
+  margin-bottom: 25px;
+  background-color: $brown;
+
+  border: 1px solid $brown;
+  cursor: pointer;
+
+  &--clear {
+    color: $main-black;
+    background-color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 362px;
+    margin-left: 24px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    max-width: 230px;
+    margin-left: 21px;
+  }
+}
+
+// Состояния
+
+.filter__item--open .filter__list {
+  display: block;
+}
+
+.filter__item--open .filter__price {
+  display: block;
+}
+
+.filter__item .filter__group::after {
+  // top: 38px;
+  transform: rotate(180deg);
+}
+
+.filter__item--open .filter__group::before {
+  // top: 38px;
+  transform: rotate(180deg);
+}
+
+.filter__item--nojs .filter__list {
+  display: block;
+}
+
+.filter__item--nojs .filter__price {
+  display: block;
+}

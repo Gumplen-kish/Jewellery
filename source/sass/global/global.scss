@@ -1,35 +1,36 @@
 html {
   height: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
-  
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-  
+
 body {
   width: 100%;
   height: 100%;
   min-width: 320px;
   margin: 0;
   position: relative;
-  overflow-x: hidden;
-  
-  font-family: "Poppins", Arial, sans-serif;
+
+  font-family: "Poppins", "Arial", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 21px;
   word-wrap: normal;
-  color: $black;
+  color: $main-black;
   background-color: $white;
 }
 
-main {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: auto;
+.main-page {
+  flex: 1 1 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -51,14 +52,4 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }

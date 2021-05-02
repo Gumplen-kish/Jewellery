@@ -1,0 +1,142 @@
+.promo {
+  background-color: $beige;
+  background-image: url("../img/bg-promo-desktop@1x.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-promo-desktop@2x.jpeg");
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    background-image: url("../img/bg-promo-tablet@1x.jpg");
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-promo-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    background-image: url("../img/bg-promo-mobile@1x.jpg");
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-promo-mobile@2x.jpg");
+    }
+  }
+
+  h2 {
+    @include font-source(45px, bold, 58px, $white);
+    @include clear(-4px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 38px;
+      line-height: 49px;
+    }
+  }
+
+  & p {
+    @include font-source(38px, normal, 49px, $white);
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 34px;
+      line-height: 44px;
+    }
+  }
+}
+
+.promo__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 181px;
+  padding-bottom: 180px;
+  margin-bottom: 120px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-left: -15px;
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-left: 0;
+    margin-bottom: 60px;
+    padding-top: 188px;
+    padding-bottom: 186px;
+  }
+}
+
+
+/*Промо страницы каталога*/
+.promo-catalog {
+  background-color: $beige;
+  background-image: url("../img/bg-promo-catalog-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-promo-catalog-desktop@2x.jpg");
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    background-image: url("../img/bg-promo-catalog-tablet@1x.jpg");
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-promo-catalog-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    background-image: url("../img/bg-promo-catalog-mobile@1x.jpg");
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-promo-catalog-mobile@2x.jpg");
+    }
+  }
+
+  & h2 {
+    @include font-source(34px, bold, 44px, $white);
+    @include clear(1px);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  & p {
+    @include font-source(22px, normal, 29px, $white);
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.promo-catalog__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 92px;
+  padding-bottom: 95px;
+  margin-bottom: 80px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 78px;
+    padding-bottom: 80px;
+    margin-bottom: 40px;
+  }
+}
