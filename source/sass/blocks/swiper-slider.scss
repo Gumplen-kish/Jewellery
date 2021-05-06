@@ -296,6 +296,7 @@
   width: 8px;
   height: 8px;
   display: inline-block;
+  vertical-align: auto;
   border-radius: 100%;
   background: #000;
   opacity: 0.2;
@@ -344,6 +345,7 @@ button.swiper-pagination-bullet {
   > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic
   .swiper-pagination-bullet {
   display: inline-block;
+  vertical-align: auto;
   transition: 200ms transform, 200ms top;
 }
 
