@@ -85,13 +85,11 @@
     display: block;
   }
 
-  
-
   & .faq__btn {
     &::after {
       top: 10px;
       transform: rotate(180deg);
-  
+
       @media (max-width: $breakpoint-tablet) {
         top: 5px;
       }
