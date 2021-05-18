@@ -1,6 +1,8 @@
 .footer {
+  position: relative;
   flex-grow: 0;
   background-color: $black;
+  bottom: 0;
 
   & input {
     @include main-font-source(14px, 500, 21px, $grey);
@@ -16,7 +18,7 @@
     &:focus {
       opacity: 0.8;
       background-color: $white;
-      color: $main-black;
+      color: $grey;
     }
   }
 
@@ -31,7 +33,7 @@
 
     &:hover,
     &:focus {
-      opacity: 0.8;
+      opacity: 0.9;
     }
   }
 }

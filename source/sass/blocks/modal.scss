@@ -26,6 +26,11 @@
     visibility: visible;
     z-index: 30;
     background-color: rgba(29, 22, 19, 0.25);
+    overflow: auto;
+  }
+
+  @media (max-width: $breakpoint-mobile) { 
+    top: -62px;
   }
 }
 
@@ -48,13 +53,11 @@
 
     @media (max-width: $breakpoint-mobile) {
       max-width: 270px;
-      margin-top: 50px;
+      margin-top: 112px;
     }
   }
 
   &--cart {
-    margin-top: 372px;
-
     @media (max-width: $breakpoint-tablet) {
       max-width: 502px;
       margin-top: 258px;
@@ -71,6 +74,7 @@
       max-width: 426px;
       margin-top: 27px;
       margin-left: 0;
+      overflow: auto;
     }
 
     @media (max-width: $breakpoint-mobile) {

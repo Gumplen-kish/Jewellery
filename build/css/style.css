@@ -372,9 +372,8 @@ img {
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-    color: #9b9997; }
+    color: black; }
     .search input:hover, .search input:focus {
-      opacity: 0.8;
       color: #1d1613;
       outline: 1px solid #a87b62;
       outline-offset: 3px; }
@@ -650,7 +649,7 @@ img {
   border-bottom: 1px solid #a87b62; }
   @media (max-width: 1023px) {
     .new__link {
-      margin-bottom: 50px; } }
+      margin-bottom: 54px; } }
   @media (max-width: 767px) {
     .new__link {
       margin-bottom: 42px; } }
@@ -664,7 +663,7 @@ img {
       margin-bottom: 39px; } }
   @media (max-width: 767px) {
     .new__swiper {
-      margin-bottom: 29px; } }
+      margin-bottom: 32px; } }
 
 .new__list {
   margin: 0;
@@ -697,13 +696,10 @@ img {
   .new__item p {
     margin-top: 17px;
     margin-bottom: 6px; }
-    @media (max-width: 1023px) {
-      .new__item p {
-        margin-top: 13px;
-        margin-bottom: 11px; } }
     @media (max-width: 767px) {
       .new__item p {
-        margin-bottom: 5px; } }
+        margin-top: 14px;
+        margin-bottom: 2px; } }
   .new__item span {
     font-size: 14px;
     font-weight: bold;
@@ -1483,7 +1479,7 @@ button.swiper-pagination-bullet {
   color: #ffffff;
   width: 100%;
   min-height: 68px;
-  margin-bottom: 2px;
+  margin-bottom: 15px;
   background-color: #a87b62;
   border: 1px solid #a87b62;
   cursor: pointer; }
@@ -2124,7 +2120,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 89px; }
   @media (max-width: 1023px) {
     .product__container {
-      margin-bottom: 68px; } }
+      margin-bottom: 64px; } }
   @media (max-width: 767px) {
     .product__container {
       -webkit-box-orient: vertical;
@@ -2182,7 +2178,7 @@ button.swiper-pagination-bullet {
     .product__img-wrap {
       width: 290px;
       margin-right: 0;
-      margin-bottom: 45px; } }
+      margin-bottom: 35px; } }
   .product__img-wrap span {
     display: none; }
     @media (max-width: 767px) {
@@ -2235,7 +2231,7 @@ button.swiper-pagination-bullet {
   border: 1px solid #a87b62;
   padding-top: 24px;
   padding-bottom: 21px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   text-align: center; }
   @media (max-width: 767px) {
     .product__button {
@@ -2254,9 +2250,11 @@ button.swiper-pagination-bullet {
   color: #9b9997;
   font-size: 14px;
   line-height: 18px; }
+  @media (max-width: 1023px) {
+    .product__conditions {
+      font-size: 12px; } }
   @media (max-width: 767px) {
     .product__conditions {
-      font-size: 12px;
       line-height: 16px; } }
   @media (max-width: 767px) {
     .product__conditions li {
@@ -2331,7 +2329,7 @@ button.swiper-pagination-bullet {
     .product__item--small {
       margin-bottom: 0; }
       .product__item--small:not(:nth-child(3n)) {
-        margin-right: 9px; } }
+        margin-right: 14px; } }
   @media (max-width: 767px) {
     .product__item--small {
       display: none; } }
@@ -2345,12 +2343,13 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 1023px) {
   .product__item--big {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex;
+    margin-bottom: 9px;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; } }
 
 @media (max-width: 767px) {
   .product__item--big {
@@ -2538,7 +2537,9 @@ button.swiper-pagination-bullet {
       height: 256px; } }
   .blog__img-big img {
     width: auto;
-    height: 630px; }
+    height: 630px;
+    -o-object-fit: none;
+       object-fit: none; }
     @media (max-width: 1023px) {
       .blog__img-big img {
         width: 339px;
@@ -2813,7 +2814,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 130px; }
   @media (max-width: 1023px) {
     .chjewellery__wrapper {
-      margin-bottom: 63px; } }
+      margin-bottom: 76px; } }
   @media (max-width: 767px) {
     .chjewellery__wrapper {
       margin-bottom: 62px; } }
@@ -2832,10 +2833,12 @@ button.swiper-pagination-bullet {
       margin-bottom: 46px; } }
 
 .footer {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  background-color: #000000; }
+  background-color: #000000;
+  bottom: 0; }
   .footer input {
     font-family: "Poppins", "Arial", sans-serif;
     font-weight: 500;
@@ -2853,7 +2856,7 @@ button.swiper-pagination-bullet {
     .footer input:hover, .footer input:focus {
       opacity: 0.8;
       background-color: #ffffff;
-      color: #1d1613; }
+      color: #9b9997; }
   .footer button {
     font-family: "Poppins", "Arial", sans-serif;
     font-weight: 500;
@@ -2867,7 +2870,7 @@ button.swiper-pagination-bullet {
     background-color: transparent;
     cursor: pointer; }
     .footer button:hover, .footer button:focus {
-      opacity: 0.8; }
+      opacity: 0.9; }
 
 .footer__container {
   display: -webkit-box;
@@ -3113,7 +3116,11 @@ button.swiper-pagination-bullet {
     opacity: 1;
     visibility: visible;
     z-index: 30;
-    background-color: rgba(29, 22, 19, 0.25); }
+    background-color: rgba(29, 22, 19, 0.25);
+    overflow: auto; }
+  @media (max-width: 767px) {
+    .modal {
+      top: -62px; } }
 
 .modal__content {
   position: relative;
@@ -3133,22 +3140,21 @@ button.swiper-pagination-bullet {
     @media (max-width: 767px) {
       .modal__content--login {
         max-width: 270px;
-        margin-top: 50px; } }
-  .modal__content--cart {
-    margin-top: 372px; }
-    @media (max-width: 1023px) {
-      .modal__content--cart {
-        max-width: 502px;
-        margin-top: 258px; } }
-    @media (max-width: 767px) {
-      .modal__content--cart {
-        max-width: 290px;
-        margin-top: 117px; } }
+        margin-top: 112px; } }
+  @media (max-width: 1023px) {
+    .modal__content--cart {
+      max-width: 502px;
+      margin-top: 258px; } }
+  @media (max-width: 767px) {
+    .modal__content--cart {
+      max-width: 290px;
+      margin-top: 117px; } }
   @media (max-width: 1023px) {
     .modal__content--filter {
       max-width: 426px;
       margin-top: 27px;
-      margin-left: 0; } }
+      margin-left: 0;
+      overflow: auto; } }
   @media (max-width: 767px) {
     .modal__content--filter {
       max-width: 272px;
