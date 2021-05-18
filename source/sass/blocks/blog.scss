@@ -159,6 +159,7 @@
   & img {
     width: auto;
     height: 630px;
+    object-fit: none;
 
     @media (max-width: $breakpoint-tablet) {
       width: 339px;

@@ -3,7 +3,7 @@
   margin-bottom: 89px;
 
   @media (max-width: $breakpoint-tablet) {
-    margin-bottom: 68px;
+    margin-bottom: 64px;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -54,7 +54,7 @@
   @media (max-width: $breakpoint-mobile) {
     width: 290px;
     margin-right: 0;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
   }
 
   & span {
@@ -105,7 +105,7 @@
   border: 1px solid $brown;
   padding-top: 24px;
   padding-bottom: 21px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   text-align: center;
 
   @media (max-width: $breakpoint-mobile) {
@@ -121,8 +121,11 @@
   font-size: 14px;
   line-height: 18px;
 
-  @media (max-width: $breakpoint-mobile) {
+  @media (max-width: $breakpoint-tablet) {
     font-size: 12px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
     line-height: 16px;
   }
 
@@ -200,7 +203,7 @@
     margin-bottom: 0;
 
     &:not(:nth-child(3n)) {
-      margin-right: 9px;
+      margin-right: 14px;
     }
   }
 
@@ -221,8 +224,9 @@
 
 .product__item--big {
   @media (max-width: $breakpoint-tablet) {
-    order: -1;
     display: flex;
+    margin-bottom: 9px;
+    order: -1;
   }
 
   @media (max-width: $breakpoint-mobile) {
