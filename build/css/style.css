@@ -3120,7 +3120,10 @@ button.swiper-pagination-bullet {
     overflow: auto; }
   @media (max-width: 767px) {
     .modal {
-      top: -62px; } }
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); } }
 
 .modal__content {
   position: relative;
@@ -3183,6 +3186,8 @@ button.swiper-pagination-bullet {
       padding-bottom: 45px;
       padding-left: 15px;
       padding-right: 14px; } }
+  .cart__wrap h2 {
+    text-align: center; }
   .cart__wrap p {
     font-family: "Cormorant Garamond", "Garamond", serif;
     font-weight: bold;
@@ -3197,9 +3202,8 @@ button.swiper-pagination-bullet {
       .cart__wrap p {
         font-size: 24px;
         line-height: 29px;
-        width: 189px;
-        margin: 0 auto;
-        margin-bottom: 29px; } }
+        margin-bottom: 29px;
+        text-align: start; } }
 
 .cart__wrapper {
   position: relative;
@@ -3251,6 +3255,8 @@ button.swiper-pagination-bullet {
       margin-right: 23px; } }
   @media (max-width: 767px) {
     .cart__img {
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
       margin-right: 15px; } }
   .cart__img img {
     width: 84px;
@@ -3381,9 +3387,9 @@ button.swiper-pagination-bullet {
     margin: 0; }
     @media (max-width: 767px) {
       .cart__inner p {
-        font-size: 12px;
+        font-size: 15px;
         line-height: 16px;
-        margin-bottom: 15px; } }
+        margin-bottom: 12px; } }
     .cart__inner p:last-child {
       font-weight: 500; }
       @media (max-width: 767px) {
@@ -3424,7 +3430,7 @@ button.swiper-pagination-bullet {
     color: #1d1613; }
     @media (max-width: 767px) {
       .cart__links-btn--continue {
-        margin-bottom: 20px; } }
+        margin-bottom: 23px; } }
   .cart__links-btn--checkout {
     background-color: #a87b62;
     color: #ffffff; }
@@ -3444,7 +3450,7 @@ button.swiper-pagination-bullet {
   .cart__product p {
     font-family: "Cormorant Garamond", "Garamond", serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 23px;
     color: #1d1613;
     margin: 0;
@@ -3472,4 +3478,4 @@ button.swiper-pagination-bullet {
       margin-right: 191px; } }
   @media (max-width: 767px) {
     .cart__product {
-      margin-right: 32px; } }
+      margin-right: 44px; } }
