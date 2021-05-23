@@ -25,6 +25,11 @@ body {
   background-color: $white;
 }
 
+.body_opened-header {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .main-page {
   flex: 1 1 0;
 }
