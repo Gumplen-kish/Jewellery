@@ -66,6 +66,10 @@ body {
   color: #1d1613;
   background-color: #ffffff; }
 
+.body_opened-header {
+  height: 100vh;
+  overflow: hidden; }
+
 .main-page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
@@ -2423,6 +2427,10 @@ button.swiper-pagination-bullet {
       max-height: none;
       -ms-flex-line-pack: center;
           align-content: center; } }
+  @media (max-width: 1180px) {
+    .blog__list {
+      -ms-flex-line-pack: none;
+          align-content: none; } }
 
 .blog__item {
   display: -webkit-box;
@@ -2453,6 +2461,9 @@ button.swiper-pagination-bullet {
     width: 48.72%;
     margin-left: 20px;
     min-height: 630px; }
+    @media (max-width: 1180px) {
+      .blog__item:last-child {
+        width: 40%; } }
     @media (max-width: 1023px) {
       .blog__item:last-child {
         position: static;
@@ -2468,11 +2479,13 @@ button.swiper-pagination-bullet {
       flex-shrink: 0;
   width: 285px;
   min-height: 300px;
+  max-height: 300px;
   padding-top: 64px;
   padding-right: 51px;
   padding-bottom: 62px;
   padding-left: 52px;
-  background-color: #f0eae4; }
+  background-color: #f0eae4;
+  overflow: hidden; }
   @media (max-width: 1023px) {
     .blog__text {
       width: 339px;
@@ -2482,6 +2495,7 @@ button.swiper-pagination-bullet {
     .blog__text {
       width: 290px;
       min-height: 256px;
+      max-height: 256px;
       padding-top: 44px;
       padding-bottom: 32px; } }
   .blog__text span {
@@ -3120,7 +3134,10 @@ button.swiper-pagination-bullet {
     overflow: auto; }
   @media (max-width: 767px) {
     .modal {
-      top: -62px; } }
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); } }
 
 .modal__content {
   position: relative;
@@ -3183,6 +3200,21 @@ button.swiper-pagination-bullet {
       padding-bottom: 45px;
       padding-left: 15px;
       padding-right: 14px; } }
+  @media (max-width: 767px) {
+    .cart__wrap h2 {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 33px;
+      margin-top: 8px;
+      padding-left: 37px;
+      padding-right: 36px;
+      text-align: center;
+      font-family: "Cormorant Garamond","Arial", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 120%;
+      color: #1d1613; } }
   .cart__wrap p {
     font-family: "Cormorant Garamond", "Garamond", serif;
     font-weight: bold;
@@ -3197,9 +3229,8 @@ button.swiper-pagination-bullet {
       .cart__wrap p {
         font-size: 24px;
         line-height: 29px;
-        width: 189px;
-        margin: 0 auto;
-        margin-bottom: 29px; } }
+        margin-bottom: 29px;
+        text-align: start; } }
 
 .cart__wrapper {
   position: relative;
@@ -3251,6 +3282,8 @@ button.swiper-pagination-bullet {
       margin-right: 23px; } }
   @media (max-width: 767px) {
     .cart__img {
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
       margin-right: 15px; } }
   .cart__img img {
     width: 84px;
@@ -3381,9 +3414,9 @@ button.swiper-pagination-bullet {
     margin: 0; }
     @media (max-width: 767px) {
       .cart__inner p {
-        font-size: 12px;
+        font-size: 15px;
         line-height: 16px;
-        margin-bottom: 15px; } }
+        margin-bottom: 12px; } }
     .cart__inner p:last-child {
       font-weight: 500; }
       @media (max-width: 767px) {
@@ -3424,7 +3457,7 @@ button.swiper-pagination-bullet {
     color: #1d1613; }
     @media (max-width: 767px) {
       .cart__links-btn--continue {
-        margin-bottom: 20px; } }
+        margin-bottom: 23px; } }
   .cart__links-btn--checkout {
     background-color: #a87b62;
     color: #ffffff; }
@@ -3444,7 +3477,7 @@ button.swiper-pagination-bullet {
   .cart__product p {
     font-family: "Cormorant Garamond", "Garamond", serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 23px;
     color: #1d1613;
     margin: 0;
@@ -3472,4 +3505,4 @@ button.swiper-pagination-bullet {
       margin-right: 191px; } }
   @media (max-width: 767px) {
     .cart__product {
-      margin-right: 32px; } }
+      margin-right: 44px; } }

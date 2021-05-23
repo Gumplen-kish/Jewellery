@@ -30,7 +30,9 @@
   }
 
   @media (max-width: $breakpoint-mobile) { 
-    top: -62px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 

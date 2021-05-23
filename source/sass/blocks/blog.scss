@@ -40,6 +40,10 @@
     max-height: none;
     align-content: center;
   }
+
+  @media (max-width: 1180px) {
+    align-content: none;
+  }
 }
 
 .blog__item {
@@ -67,6 +71,10 @@
     margin-left: 20px;
     min-height: 630px;
 
+    @media (max-width: 1180px) {
+      width: 40%;
+    }
+
     @media (max-width: $breakpoint-tablet) {
       position: static;
       min-height: 300px;
@@ -84,11 +92,13 @@
   flex-shrink: 0;
   width: 285px;
   min-height: 300px;
+  max-height: 300px;
   padding-top: 64px;
   padding-right: 51px;
   padding-bottom: 62px;
   padding-left: 52px;
   background-color: $beige;
+  overflow: hidden;
 
   @media (max-width: $breakpoint-tablet) {
     width: 339px;
@@ -99,6 +109,7 @@
   @media (max-width: $breakpoint-mobile) {
     width: 290px;
     min-height: 256px;
+    max-height: 256px;
     padding-top: 44px;
     padding-bottom: 32px;
   }
